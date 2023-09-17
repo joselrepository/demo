@@ -40,7 +40,7 @@ const initialState: DataState = {
 export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async () => {
-    await sleep(5000);
+    // await sleep(5000);
     const res = await fetch("http://localhost:3000/products");
     const { products } = (await res.json()) as { products: Product[] };
 

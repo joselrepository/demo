@@ -14,8 +14,8 @@ function ProductList() {
 
   if (status === "loading") {
     return (
-      <div className="flex justify-center items-center min-h-[250px]">
-        <LoadingSpinner height={20} width={20} />
+      <div className="flex justify-center items-center gap-8 min-h-[250px]">
+        <LoadingSpinner height="20" width="20" />
       </div>
     );
   }
@@ -70,7 +70,7 @@ function ProductList() {
             </FilterMenuItem>
           </ul>
         </div>
-        <ul className="products grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+        <ul className="products grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
           {filteredProducts?.map((product) => (
             <ProductCard product={product} />
           ))}

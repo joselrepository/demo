@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoadingSpinner({ height, width }: { height: number; width: number }) {
+function LoadingSpinner({ height, width }: { height: string; width: string }) {
   return (
     <div role="status">
       <svg

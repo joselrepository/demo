@@ -4,6 +4,7 @@
 // import jwt from "jwt-mock-server";
 import { rest } from "msw";
 import { USERS, PRODUCTS } from "./data";
+import { sleep } from "../utils/utils";
 
 // const storedData = sessionStorage.getItem("user");
 // const dataStore = storedData ? JSON.parse(storedData) : [];
@@ -39,6 +40,8 @@ export const handlers = [
     const user = USERS.find(
       (user) => user.username === username && user.password === password
     );
+
+    // await sleep(6000);
 
     if (!user) {
       return res(
