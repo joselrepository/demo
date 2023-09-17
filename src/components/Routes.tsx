@@ -12,6 +12,8 @@ import About from "../pages/About";
 import ProductList from "../features/product/ProductList";
 import PageNotFound from "./PageNotFound";
 import ProductDetails from "../features/product/ProductDetails";
+import Tailwind from "./Tailwind";
+import Space from "./Space";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +34,8 @@ const router = createBrowserRouter(
       <Route path="/login" element={<LoginPage />} />
       <Route path="products/:id" element={<ProductDetails />} />
       <Route path="*" element={<PageNotFound />} />
+      <Route path="/tailwind" element={<Tailwind />} />
+      <Route path="/space" element={<Space />} />
     </>
   )
 );

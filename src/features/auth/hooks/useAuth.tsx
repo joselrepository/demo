@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import useUser, { User } from "../../user/hooks/useUser";
 
 export default function useAuth() {
@@ -34,7 +34,7 @@ export default function useAuth() {
       }
     } catch (e) {
       if (e instanceof Error && e.name === "AbortError") {
-        alert("Abort Controller");
+        alert("Your request has been aborted");
       } else if (e instanceof Error) {
         alert(e.message);
       }
